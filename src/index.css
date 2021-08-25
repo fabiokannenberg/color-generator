@@ -12,6 +12,7 @@
 h1 {
   font-size: 3em;
   text-shadow: 0 3px 1em black;
+  margin: 1.5em 0;
 }
 
 h2 {
@@ -42,7 +43,7 @@ header {
 }
 
 header {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .shadow {
