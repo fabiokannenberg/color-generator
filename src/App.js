@@ -126,7 +126,7 @@ function App() {
           <button className='btn' type='submit'>
             <div>
               <BiSearch className='icon' />
-              <span>Search</span>
+              <span>Submit</span>
             </div>
           </button>
         </form>
