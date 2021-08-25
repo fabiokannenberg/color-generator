@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --bg-color: #342444;
+  --btn-color: #8c7cfc;
+  --btn-hover: #7667da;
+  --text-color: white;
+  --error-color: #d52a2a;
+  --border-radius: 5px;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 3px 1em black;
+}
+
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-shadow: 1px 1px 1em black;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+main,
+header {
+  text-align: center;
+  margin: auto;
+  max-width: 1125px;
+}
+
+header {
+  margin-bottom: 3em;
+}
+
+.shadow {
+  box-shadow: 0 3px 1em black;
+}
+
+.btn {
+  background: var(--btn-color);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-secondary:hover {
+  background-color: var(--btn-hover);
+}
+
+.btn-container {
+  /* border: 1px solid white; */
+  margin: auto;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 400px;
+  max-width: 500px;
+  min-width: 400px;
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  border: 1px solid lightgrey;
+  color: white;
+  font-weight: bolder;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  height: 40px;
+  margin-left: 3px;
+  width: 45.5%;
+}
+
+/* ------------- SEARCH-BAR ------------- */
+
+.search-bar {
+  display: flex;
+  margin: auto;
+  width: 35%; /* 75 */
+  max-width: 700px;
+  min-width: 400px;
+  background-color: white;
+  border: solid 1px white;
+  padding: 3px;
+  height: 2.5em;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.search-bar input {
+  width: 60%;
+  border: none;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar p {
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.search-bar .btn {
+  width: 40%;
+  margin-left: 3px;
+  min-width: 80px;
+}
+
+.search-bar .btn:hover {
+  cursor: pointer;
+}
+
+.search-bar .btn div {
+  display: flex;
+  justify-content: center;
+  max-width: 70px;
+  margin: auto;
+}
+
+.search-bar .btn span {
+  margin: auto;
+}
+
+.icon {
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ------------- COLOR CARDS -------------*/
+
+.color-container {
+  margin: auto;
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(225px, 1fr));
+  box-shadow: 0 3px 1em black;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.main-color-container {
+  width: 225px;
+  margin: auto;
+  box-shadow: 0 3px 1em black;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.color-square {
+  background-color: #f11025;
+  height: 225px;
+  cursor: pointer;
+}
+
+.color-square p {
+  text-align: left;
+}
+
+.color-square-info {
+  padding: 1em;
+}
+
+.footer {
+  padding: 1.5em;
+}
+
+/* ---------- MODAL ---------- */
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  min-height: 30%;
+  width: 70%; /* Could be more or less, depending on screen size */
+  max-width: 525px;
+  border-radius: var(--border-radius);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.modal-search-bar {
+  margin: 15px 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-search-bar input {
+  outline: none;
+  height: 35px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: none;
+  /* border: 1.5px solid rgb(167, 166, 166); #####inline css em src/Modal*/
+}
+
+.modal-search-bar h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.modal-search-bar .btn {
+  height: 3em;
+  width: 50%;
+  margin: 5% auto;
+}
+
+/* ------------- ALERTS  ------------- */
+
+.color-light {
+  color: black;
+}
+
+.error {
+  outline: 2.5px solid var(--error-color);
+}
+
+.alert {
+  margin-top: 0.7rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+/* ------------- RESPONSIVITY -------------*/
+
+@media screen and (max-width: 1250px) {
+  .color-container {
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+  }
+
+  .color-square {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .color-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  .color-square {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .color-container {
+    grid-template-columns: minmax(90vw, 1fr);
+  }
+
+  .color-square {
+    height: 120px;
+  }
+
+  .main-color-container {
+    width: 90vw;
+  }
+
+  .search-bar {
+    width: 90vw;
+    min-width: 0;
+  }
+
+  .btn-container {
+    width: 90vw;
+    min-width: 0;
+  }
+
+  .btn-secondary {
+    min-width: 0;
+  }
+}
