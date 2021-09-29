@@ -42,31 +42,31 @@ export const Modal = ({ showModal, setShowModal, colorList }) => {
             return (
               acc +
               '/*main color*/ \n \n' +
-              `--${cssVar}-main: #${current.hex} /* weight: ${current.weight}% */ \n`
+              `--${cssVar}-main: #${current.hex}; /* weight: ${current.weight}% */ \n`
             );
           } else if (index === 1) {
             return (
               acc +
               '\n' +
               '/*tints of main color*/ \n \n' +
-              `--${cssVar}-${index}: #${current.hex} /* weight: ${current.weight}% */ \n`
+              `--${cssVar}-${index}: #${current.hex}; /* weight: ${current.weight}% */ \n`
             );
           } else if (index < 11) {
             return (
               acc +
-              `--${cssVar}-${index}: #${current.hex} /* weight: ${current.weight}% */ \n`
+              `--${cssVar}-${index}: #${current.hex}; /* weight: ${current.weight}% */ \n`
             );
           } else if (index === 11) {
             return (
               acc +
               '\n' +
               '/*shades of main color*/ \n \n' +
-              `--${cssVar}-${index}: #${current.hex} /* weight: ${current.weight}% */ \n`
+              `--${cssVar}-${index}: #${current.hex}; /* weight: ${current.weight}% */ \n`
             );
           } else {
             return (
               acc +
-              `--${cssVar}-${index}: #${current.hex} /* weight: ${current.weight}% */ \n`
+              `--${cssVar}-${index}: #${current.hex}; /* weight: ${current.weight}% */ \n`
             );
           }
         },
